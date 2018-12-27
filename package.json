@@ -6,6 +6,7 @@
     "author": "Andrea Stagi <stagi.andrea@gmail.com>",
     "license": "MIT",
     "dependencies": {
+        "axios": "^0.18.0",
         "express": "^4.16.4",
         "node-cron": "^2.0.3"
     },
