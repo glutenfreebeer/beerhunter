@@ -1,10 +1,5 @@
-const cron = require("node-cron");
-const express = require("express");
-const fs = require("fs");
 const axios = require('axios');
-
-
-app = express();
+const cron = require("node-cron");
 
 cron.schedule("* * * * *", function () {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}`)
@@ -16,5 +11,3 @@ cron.schedule("* * * * *", function () {
             console.log(error);
         });
 });
-
-app.listen(3128);
